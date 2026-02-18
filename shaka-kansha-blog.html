@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>釈迦の教えは「感謝」だった｜小林正観 書籍要約ブログ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #c9a84c;
+    --gold-light: #e8d08a;
+    --gold-pale: #fdf8ee;
+    --ink: #1c1710;
+    --ink-mid: #3d3322;
+    --muted: #8a7d68;
+    --bg: #faf7f2;
+    --paper: #fff;
+    --line: #e2d9c8;
+    --red: #8b2e2e;
+    --sage: #4a6741;
+    --sage-light: #edf2eb;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    line-height: 1.85;
+    font-size: 15px;
+  }
+
+  /* ── HERO ─────────────────────────────────── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    background: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 80px 24px;
+  }
+
+  .hero-mandala {
+    position: absolute;
+    width: 700px; height: 700px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.12);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    animation: mandalaRotate 60s linear infinite;
+  }
+
+  .hero-mandala::before {
+    content: '';
+    position: absolute;
+    inset: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.08);
+  }
+
+  .hero-mandala::after {
+    content: '';
+    position: absolute;
+    inset: 80px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.06);
+  }
+
+  .hero-rays {
+    position: absolute;
+    width: 800px; height: 800px;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: conic-gradient(
+      from 0deg,
+      transparent 0deg, transparent 10deg,
+      rgba(201,168,76,0.03) 10deg, rgba(201,168,76,0.03) 20deg,
+      transparent 20deg, transparent 30deg,
+      rgba(201,168,76,0.03) 30deg, rgba(201,168,76,0.03) 40deg,
+      transparent 40deg, transparent 50deg,
+      rgba(201,168,76,0.03) 50deg, rgba(201,168,76,0.03) 60deg,
+      transparent 60deg, transparent 70deg,
+      rgba(201,168,76,0.03) 70deg, rgba(201,168,76,0.03) 80deg,
+      transparent 80deg
+    );
+    animation: mandalaRotate 120s linear infinite reverse;
+  }
+
+  .hero-glow {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 0.35em;
+    margin-bottom: 36px;
+    animation: fadeIn 1s ease both;
+  }
+
+  .hero-badge::before, .hero-badge::after {
+    content: '';
+    width: 30px; height: 1px;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+
+  .hero-lotus {
+    font-size: 32px;
+    margin-bottom: 24px;
+    display: block;
+    opacity: 0.8;
+    animation: fadeIn 1.1s ease both;
+    filter: sepia(1) saturate(2) hue-rotate(15deg);
+  }
+
+  .hero-title-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(32px, 7vw, 64px);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.25;
+    margin-bottom: 20px;
+    animation: fadeIn 1.2s ease both;
+    letter-spacing: 0.05em;
+  }
+
+  .hero-title-jp .gold { color: var(--gold); }
+
+  .hero-sub {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(13px, 2vw, 17px);
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.15em;
+    margin-bottom: 44px;
+    animation: fadeIn 1.3s ease both;
+  }
+
+  .hero-author-box {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    animation: fadeIn 1.4s ease both;
+  }
+
+  .hero-author-line {
+    width: 1px; height: 32px;
+    background: linear-gradient(to bottom, transparent, rgba(201,168,76,0.5));
+  }
+
+  .hero-author {
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.2em;
+  }
+
+  .hero-diamond {
+    width: 6px; height: 6px;
+    background: var(--gold);
+    transform: rotate(45deg);
+    opacity: 0.6;
+  }
+
+  /* ── WISDOM BAND ─────────────────────────── */
+  .wisdom-band {
+    background: linear-gradient(135deg, var(--gold), #a8822c);
+    padding: 40px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .wisdom-band::before {
+    content: '✦';
+    position: absolute;
+    font-size: 200px;
+    color: rgba(255,255,255,0.04);
+    top: -40px; right: -20px;
+  }
+
+  .wisdom-band p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(16px, 3vw, 22px);
+    font-weight: 700;
+    color: #1c1710;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+    position: relative;
+  }
+
+  /* ── CONTAINERS ──────────────────────────── */
+  .container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ── SECTIONS ────────────────────────────── */
+  .section { padding: 72px 0; }
+  .section-alt { background: var(--gold-pale); }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+    font-size: 10px;
+    letter-spacing: 0.35em;
+    color: var(--gold);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, rgba(201,168,76,0.4), transparent);
+  }
+
+  h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(22px, 4vw, 34px);
+    font-weight: 900;
+    line-height: 1.35;
+    margin-bottom: 24px;
+    color: var(--ink);
+  }
+
+  h3 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--ink);
+  }
+
+  p {
+    color: var(--ink-mid);
+    margin-bottom: 16px;
+    line-height: 1.9;
+    font-size: 14.5px;
+  }
+
+  /* ── TEACHING BOX ────────────────────────── */
+  .teaching-box {
+    background: var(--ink);
+    border-radius: 16px;
+    padding: 40px 36px;
+    margin: 32px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .teaching-box::before {
+    content: '般若心経';
+    position: absolute;
+    top: -20px; right: -10px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 80px;
+    font-weight: 900;
+    color: rgba(201,168,76,0.06);
+    writing-mode: vertical-rl;
+  }
+
+  .teaching-box .teaching-label {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .teaching-box p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(16px, 2.5vw, 22px);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.75;
+    margin: 0;
+    position: relative;
+  }
+
+  .teaching-box p span { color: var(--gold); }
+
+  /* ── FOUR SUFFERINGS ────────────────────── */
+  .sufferings-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .suffering-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .suffering-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  }
+
+  .suffering-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  }
+
+  .suffering-kanji {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .suffering-read {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .suffering-card h4 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .suffering-card p {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.65;
+  }
+
+  /* ── EIGHT SUFFERINGS ───────────────────── */
+  .eight-list {
+    margin: 28px 0;
+    display: grid;
+    gap: 10px;
+  }
+
+  .eight-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    background: var(--paper);
+    border-radius: 10px;
+    padding: 14px 18px;
+    border-left: 3px solid var(--gold);
+    box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+  }
+
+  .eight-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    color: var(--gold);
+    font-weight: 600;
+    min-width: 24px;
+    line-height: 1;
+    padding-top: 2px;
+  }
+
+  .eight-item h4 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 3px;
+  }
+
+  .eight-item p {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* ── PULL QUOTE ──────────────────────────── */
+  .pull-quote {
+    text-align: center;
+    padding: 36px 0;
+    margin: 36px 0;
+    position: relative;
+  }
+
+  .pull-quote::before, .pull-quote::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 80%;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .pull-quote::before { top: 0; }
+  .pull-quote::after { bottom: 0; }
+
+  .pull-quote .pq-symbol {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 60px;
+    color: var(--gold);
+    opacity: 0.3;
+    line-height: 0.5;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .pull-quote p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(17px, 3vw, 24px);
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  .pull-quote cite {
+    display: block;
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 14px;
+    font-style: normal;
+    letter-spacing: 0.1em;
+  }
+
+  /* ── THREE PRACTICES ─────────────────────── */
+  .practices {
+    display: grid;
+    gap: 20px;
+    margin: 32px 0;
+  }
+
+  .practice-card {
+    background: var(--paper);
+    border-radius: 16px;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    border: 1px solid var(--line);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+  }
+
+  .practice-card:hover { transform: translateY(-2px); }
+
+  .practice-icon-col {
+    width: 72px;
+    min-width: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--gold), #a8822c);
+    font-size: 28px;
+  }
+
+  .practice-body {
+    padding: 22px 24px;
+    flex: 1;
+  }
+
+  .practice-body h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+
+  .practice-body p {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.75;
+  }
+
+  /* ── SUTRA BOX ────────────────────────────── */
+  .sutra-box {
+    background: var(--ink);
+    border-radius: 16px;
+    padding: 36px;
+    margin: 32px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sutra-box::before {
+    content: '';
+    position: absolute;
+    inset: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(201,168,76,0.15);
+  }
+
+  .sutra-label {
+    font-size: 9px;
+    letter-spacing: 0.35em;
+    color: var(--gold);
+    margin-bottom: 20px;
+    display: block;
+    position: relative;
+  }
+
+  .sutra-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(14px, 2.5vw, 20px);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.9;
+    letter-spacing: 0.08em;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .sutra-translation {
+    font-size: 12px;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.8;
+    position: relative;
+  }
+
+  /* ── STORY CARD ───────────────────────────── */
+  .story-card {
+    background: var(--paper);
+    border-radius: 16px;
+    padding: 32px;
+    margin: 28px 0;
+    border: 1px solid var(--line);
+    position: relative;
+  }
+
+  .story-card::before {
+    content: '逸話';
+    position: absolute;
+    top: -10px; left: 24px;
+    background: var(--gold);
+    color: var(--ink);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    padding: 3px 12px;
+    border-radius: 99px;
+  }
+
+  .story-card h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+    padding-top: 8px;
+  }
+
+  .story-card p {
+    font-size: 13.5px;
+    line-height: 1.9;
+  }
+
+  /* ── AUTHOR BOX ───────────────────────────── */
+  .author-box {
+    background: linear-gradient(135deg, #1c1710, #2e2618);
+    border-radius: 16px;
+    padding: 36px;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    margin: 32px 0;
+  }
+
+  .author-avatar {
+    width: 68px; height: 68px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), #a8822c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--ink);
+    flex-shrink: 0;
+    border: 2px solid rgba(201,168,76,0.3);
+  }
+
+  .author-info h4 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  .author-info .role {
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+  }
+
+  .author-info p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.75;
+    margin: 0;
+  }
+
+  /* ── SUMMARY CARDS ────────────────────────── */
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 28px 0;
+  }
+
+  .summary-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .summary-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+
+  .summary-card .ch-label {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .summary-card h4 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+
+  .summary-card p {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  /* ── CTA ──────────────────────────────────── */
+  .cta-section {
+    background: linear-gradient(135deg, #1c1710, #2e2618);
+    padding: 72px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.1);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .cta-section h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(20px, 4vw, 32px);
+    color: #fff;
+    margin-bottom: 16px;
+    position: relative;
+  }
+
+  .cta-section p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.55);
+    max-width: 520px;
+    margin: 0 auto 32px;
+    line-height: 1.8;
+    position: relative;
+  }
+
+  .cta-divider {
+    width: 48px; height: 1px;
+    background: var(--gold);
+    margin: 0 auto 24px;
+    opacity: 0.5;
+  }
+
+  /* ── FOOTER ───────────────────────────────── */
+  footer {
+    background: #0f0d09;
+    padding: 28px 24px;
+    text-align: center;
+  }
+
+  footer p {
+    font-size: 11px;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 0.08em;
+    margin: 0;
+  }
+
+  /* ── DIVIDER ELEMENT ──────────────────────── */
+  .ornament {
+    text-align: center;
+    margin: 32px 0;
+    color: var(--gold);
+    opacity: 0.5;
+    font-size: 14px;
+    letter-spacing: 0.5em;
+  }
+
+  /* ── HIGHLIGHT ────────────────────────────── */
+  .highlight-box {
+    background: var(--sage-light);
+    border: 1px solid rgba(74,103,65,0.2);
+    border-left: 4px solid var(--sage);
+    border-radius: 0 10px 10px 0;
+    padding: 20px 24px;
+    margin: 20px 0;
+  }
+
+  .highlight-box h4 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--sage);
+    margin-bottom: 8px;
+  }
+
+  .highlight-box p {
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.75;
+    color: var(--ink-mid);
+  }
+
+  /* ── ANIMATIONS ───────────────────────────── */
+  @keyframes mandalaRotate {
+    from { transform: translate(-50%,-50%) rotate(0deg); }
+    to   { transform: translate(-50%,-50%) rotate(360deg); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── RESPONSIVE ───────────────────────────── */
+  @media (max-width: 600px) {
+    .sufferings-grid { grid-template-columns: 1fr; }
+    .author-box { flex-direction: column; }
+    .practice-card { flex-direction: column; }
+    .practice-icon-col { width: 100%; height: 56px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-rays"></div>
+  <div class="hero-mandala"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-badge">書籍要約 · Book Summary</div>
+    <span class="hero-lotus">🪷</span>
+    <h1 class="hero-title-jp">
+      釈迦の教えは<br>「<span class="gold">感謝</span>」だった
+    </h1>
+    <p class="hero-sub">悩み・苦しみをゼロにする方法</p>
+    <div class="hero-author-box">
+      <div class="hero-diamond"></div>
+      <div class="hero-author-line"></div>
+      <div class="hero-author">小林 正観 著</div>
+    </div>
+  </div>
+</section>
+
+<!-- WISDOM BAND -->
+<div class="wisdom-band">
+  <p>「苦」とは、不幸や災難が降ってくることではない。<br>
+  「思いどおりにならないこと」——釈迦はそう定義していた。</p>
+</div>
+
+<!-- SECTION 1: 著者について -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">About the Author · 著者について</div>
+    <h2>十万人の人生相談から<br>生まれた洞察</h2>
+
+    <p>著者の小林正観氏は、幼い頃から江戸川乱歩やシャーロック・ホームズを愛読し、人間観察の癖を身に付けた。大学時代から年間150〜180日もの旅を続け、旅先の宿で毎晩20〜30人の人相・手相を見ながら、人生相談を受け続けた。</p>
+
+    <p>25年以上にわたって積み上げた相談件数は、累計10万件以上。その膨大な経験の中から、著者はある決定的な気づきを得る——人々の悩みの本質は、常に同じ一点に収束していた。</p>
+
+    <div class="author-box">
+      <div class="author-avatar">正</div>
+      <div class="author-info">
+        <h4>小林 正観（こばやし せいかん）</h4>
+        <p class="role">旅行作家・人生哲学研究家</p>
+        <p>大学卒業後、就職経験ゼロでフリーの物書きとして活動。旅行作家として世界を旅しながら、30数年間で10数万人の人相・手相を見て人生相談を受ける。その経験から「釈迦の教え」「般若心経」の本質的解釈を独自に導き出し、多くの書籍を執筆。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: 苦とは何か -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-label">Chapter Core · 核心</div>
+    <h2>釈迦が定義した<br>「苦」の本当の意味</h2>
+
+    <p>釈迦は2500年前に「四苦八苦」という言葉を残した。しかし日本では「苦」が「苦しみ」と訓読みされる中で、その本来の意味がずれて伝わってしまった。</p>
+
+    <div class="teaching-box">
+      <span class="teaching-label">釈迦の定義 · 原典の意味</span>
+      <p>
+        「苦」とは、病気や事故が<span class="gold">向こうから降ってくる不幸</span>のことではない。<br>
+        「苦」とは——<span class="gold">思いどおりにならないこと</span>、それだけだ。
+      </p>
+    </div>
+
+    <p>つまり、悩み・苦しみは「外から与えられるもの」ではなく、「自分の内にある思い」と「現実のギャップ」から生まれる。思いどおりにしたいという欲求があるから、思いどおりにならないことが苦しみになる——これが釈迦の洞察だった。</p>
+
+    <div class="pull-quote">
+      <span class="pq-symbol">"</span>
+      <p>「思い」がなければ、<br>「思いどおりにならない」という苦しみも生じない</p>
+      <cite>小林正観『釈迦の教えは「感謝」だった』より</cite>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: 四苦八苦 -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">Chapter 3 · 四苦八苦</div>
+    <h2>「四苦八苦」の本質</h2>
+    <p>釈迦はすべての苦しみを「四苦八苦」として分類した。四つの根本的な苦しみ（四苦）と、さらに四つを加えた計八つ（八苦）だ。</p>
+
+    <div class="sufferings-grid">
+      <div class="suffering-card">
+        <span class="suffering-kanji">生</span>
+        <span class="suffering-read">しょう</span>
+        <h4>生まれること</h4>
+        <p>生まれ来ることは自分の意志では選べない。思いどおりにならない始まり。</p>
+      </div>
+      <div class="suffering-card">
+        <span class="suffering-kanji">老</span>
+        <span class="suffering-read">ろう</span>
+        <h4>老いること</h4>
+        <p>老いたくないと思っても、年はとる。思いどおりにはならない。</p>
+      </div>
+      <div class="suffering-card">
+        <span class="suffering-kanji">病</span>
+        <span class="suffering-read">びょう</span>
+        <h4>病むこと</h4>
+        <p>病気をしたくないと思っても病気になる。これも思いどおりにならない。</p>
+      </div>
+      <div class="suffering-card">
+        <span class="suffering-kanji">死</span>
+        <span class="suffering-read">し</span>
+        <h4>死ぬこと</h4>
+        <p>死にたくないと思っても死は確実に訪れる。個人の意思を無視する。</p>
+      </div>
+    </div>
+
+    <p style="margin-top: 8px;">四苦にさらに四つを加えたものが「八苦」の全体像だ。</p>
+
+    <div class="eight-list">
+      <div class="eight-item">
+        <span class="eight-num">5</span>
+        <div>
+          <h4>愛別離苦（あいべつりく）</h4>
+          <p>愛している人と別れなければならない苦しみ。思いどおりにならない。</p>
+        </div>
+      </div>
+      <div class="eight-item">
+        <span class="eight-num">6</span>
+        <div>
+          <h4>怨憎会苦（おんぞうえく）</h4>
+          <p>怨んで憎んでいる人と会わなければならない苦しみ。</p>
+        </div>
+      </div>
+      <div class="eight-item">
+        <span class="eight-num">7</span>
+        <div>
+          <h4>求不得苦（ぐふとくく）</h4>
+          <p>求めても得られない苦しみ。欲しいものが手に入らない。</p>
+        </div>
+      </div>
+      <div class="eight-item">
+        <span class="eight-num">8</span>
+        <div>
+          <h4>五蘊盛苦（ごうんじょうく）</h4>
+          <p>色・受・想・行・識の五つの感覚が盛んに働くことで生じる苦しみ。自分の物差しで世界を判断するから苦しむ。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: 般若心経 -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-label">Chapter 4 · 般若心経</div>
+    <h2>「般若心経」は<br>難しくない</h2>
+
+    <p>釈迦は「この般若心経だけは後世に必ず伝えたい」と強く願ったと著者は分析する。その内容は、実はたった一つのメッセージに収束している。</p>
+
+    <div class="sutra-box">
+      <span class="sutra-label">般若心経 · 冒頭の偈</span>
+      <div class="sutra-text">
+        観自在菩薩　行深般若波羅蜜多時<br>
+        照見五蘊皆空　度一切苦厄
+      </div>
+      <div class="sutra-translation">
+        人類を救済する知恵を深める観音菩薩が、深い行の中に入られたとき、<br>
+        五蘊はすべて空（くう）であると照らし見て、<br>
+        一切の苦しみをこの岸から彼岸へと渡した。
+      </div>
+    </div>
+
+    <p>「色即是空、空即是色」という言葉が有名だが、著者によればこの般若心経が伝えたいのは一言——「あらゆる現象に色（価値判断）をつけているのは自分の思いであり、その思いがなければ苦しみもない」ということだ。</p>
+
+    <div class="highlight-box">
+      <h4>🌸 「空」とは何か</h4>
+      <p>「空」とは「何もない」ではなく、「特別な性格づけがされているわけではない」という意味。物事は存在するが、それに意味や評価を貼り付けているのは自分自身の物差し（思い）に過ぎない。物差しがなければ、苦しみも生じない。</p>
+    </div>
+
+    <div class="story-card">
+      <h3>玄奘三蔵が伝えた「般若心経」</h3>
+      <p>唐の僧・玄奘三蔵は、27歳で天竺（インド）に向かい16年かけて帰国。その後18年間、寺の外に一歩も出ることなく仏教典の漢語訳に没頭して死んだ。「他のお経は伝わらなくてもいい、この般若心経だけは必ず伝えよ」と弟子たちに語り続けた。旅の途中、腐った膿を口で吸い取るよう頼んだ老婆（実は観音菩薩）に出会い、般若心経を授けられたという伝承も残る。</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: 解決策 -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">Solution · 解決策</div>
+    <h2>悩み・苦しみを<br>ゼロにする方法</h2>
+
+    <p>著者が30年以上・10万件以上の人生相談から導き出した結論はシンプルだ。</p>
+
+    <div class="teaching-box">
+      <span class="teaching-label">核心の一句</span>
+      <p>
+        「思いどおりにしよう」とするのをやめ、<br>
+        <span class="gold">すべてを「受け容れる」</span>。<br>
+        それだけで、悩み・苦しみはゼロになる。
+      </p>
+    </div>
+
+    <p>「受け容れる」とは「あきらめる」ではない。現象を変えようとすることをやめ、起きたことをそのまま認める——その瞬間に苦しみは消える。著者自身もこの実践によって「ほんとうに悩み・苦しみがなくなった」と語る。</p>
+
+    <div class="pull-quote">
+      <p>過去のすべてを受け容れる（1秒目）<br>
+      現在のすべてを受け容れる（2秒目）<br>
+      未来のすべてを受け容れる（3秒目）</p>
+      <cite>悟りに必要な時間は、最低3秒でよい</cite>
+    </div>
+
+    <div class="highlight-box">
+      <h4>📌 「受け容れる」の実践例：不登校の子供</h4>
+      <p>「子供が不登校になった。どうすれば学校に行かせられるか？」——これは「子供を自分の思いどおりにしたい」という相談だ。子供が不登校という最善の選択をした事実を「受け容れる」ことで、悩みは消える。子供が最も傷ついていることを理解し、味方であり続けることが大切。</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: 三つの実践 -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-label">Chapter 7 · 実践</div>
+    <h2>「感謝」に至る<br>三つの実践</h2>
+
+    <p>「受け容れる」をさらに深めていくと、最終的に「感謝」に辿り着く——これが釈迦の教えの本質だと著者は言う。そのための具体的な三つの実践がある。</p>
+
+    <div class="practices">
+      <div class="practice-card">
+        <div class="practice-icon-col">🙏</div>
+        <div class="practice-body">
+          <h3>感謝（かんしゃ）</h3>
+          <p>すべての出来事・現象に「ありがとう」と言う。良いことも悪いことも、すべてを感謝で受け取る姿勢が、苦しみを消す最強の方法。釈迦の教えは結局、この「感謝」に行き着く。</p>
+        </div>
+      </div>
+      <div class="practice-card">
+        <div class="practice-icon-col">😊</div>
+        <div class="practice-body">
+          <h3>笑い（わらい）</h3>
+          <p>笑うことは脳と心に直接作用する。深刻な顔で悩んでいるより、笑いの中にいることが、受け容れる力を育てる。日常のあらゆる場面に笑いを持ち込む習慣が大切。</p>
+        </div>
+      </div>
+      <div class="practice-card">
+        <div class="practice-icon-col">🧹</div>
+        <div class="practice-body">
+          <h3>掃除（そうじ）</h3>
+          <p>周囲の環境を整えることは、心を整えることと直結している。黙々と掃除をする行為そのものが「今この瞬間への集中」を生み、受け容れる心を養う実践になる。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ornament">✦ · · · ✦</div>
+
+    <div class="highlight-box">
+      <h4>🌿 「努力」の本来の意味</h4>
+      <p>著者は「努力」という言葉の語源を解説する。「努」は「奴隷にむりやり強制して力を出させること」が語源。嫌なことを強制されることが「努力」の本来の意味だ。本当に好きで自発的にやることは「努力」ではなく「ボランティア（自発的行為）」と表現すべきだ——この気づきは、努力信仰への根本的な問い直しとなる。</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7: まとめ -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">Summary · まとめ</div>
+    <h2>本書が伝える<br>７つのエッセンス</h2>
+
+    <div class="summary-grid">
+      <div class="summary-card">
+        <span class="ch-label">ESSENCE 01</span>
+        <h4>「苦」の正体は思いどおりにならないこと</h4>
+        <p>病気・事故・不幸が向こうから来るのではなく、自分の「思い」と現実のギャップが苦しみの根源。</p>
+      </div>
+      <div class="summary-card">
+        <span class="ch-label">ESSENCE 02</span>
+        <h4>四苦八苦はすべて「思いどおりにならないこと」</h4>
+        <p>生老病死も、愛別離苦も怨憎会苦も、すべて自分の意志通りにならないことへの抵抗から生まれる。</p>
+      </div>
+      <div class="summary-card">
+        <span class="ch-label">ESSENCE 03</span>
+        <h4>般若心経は簡単なことを言っている</h4>
+        <p>「五蘊は皆空」——自分の物差しで評価をつけることをやめれば、苦しみは消える。</p>
+      </div>
+      <div class="summary-card">
+        <span class="ch-label">ESSENCE 04</span>
+        <h4>悩みの9割は「他人をどう変えるか」という相談</h4>
+        <p>他人を自分の思いどおりにしようとすること自体が苦しみの原因。相手を変えようとするのをやめる。</p>
+      </div>
+      <div class="summary-card">
+        <span class="ch-label">ESSENCE 05</span>
+        <h4>「受け容れる」で苦しみはゼロになる</h4>
+        <p>あきらめではなく、起きた事実をそのまま認めること。それだけで悩み・苦しみは消える。</p>
+      </div>
+      <div class="summary-card">
+        <span class="ch-label">ESSENCE 06</span>
+        <h4>受け容れるを深めると「感謝」になる</h4>
+        <p>釈迦の教えの最終地点は「感謝」。すべての出来事に「ありがとう」と言える境地が目標。</p>
+      </div>
+      <div class="summary-card">
+        <span class="ch-label">ESSENCE 07</span>
+        <h4>三つの実践：感謝・笑い・掃除</h4>
+        <p>日常のあらゆる場面でこの三つを実践することが、苦しみのない人生への具体的な道になる。</p>
+      </div>
+      <div class="summary-card">
+        <span class="ch-label">ESSENCE 08</span>
+        <h4>人間は「喜ばれる存在」になるためにいる</h4>
+        <p>競争・上昇志向ではなく、人の間で喜ばれる存在として生きることが、人間の本来の在り方。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-divider"></div>
+  <h2>「受け容れる」を<br>今日から始めよう</h2>
+  <p>目の前の現実に「思いどおりにしなければ」と戦うのをやめる。<br>
+  ただそれだけで、2500年前の釈迦が伝えたかった<br>
+  苦しみゼロの人生が始まる。</p>
+  <p style="color: rgba(255,255,255,0.3); font-size: 12px; margin-bottom: 0;">
+    🪷 &nbsp; ありがとう &nbsp; · &nbsp; 感謝 &nbsp; · &nbsp; 受け容れる &nbsp; 🪷
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>書籍要約：「釈迦の教えは『感謝』だった」　著者：小林 正観　すべての著作権は原著者に帰属します</p>
+</footer>
+
+</body>
+</html>
